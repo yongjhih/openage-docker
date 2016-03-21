@@ -2,16 +2,18 @@
 
 Dockerfile to build and run [openage](https://github.com/SFTtech/openage).
 
-### Installation
+## Usage
 
-1. Install docker and docker-compose (see [here](https://docs.docker.com/installation/ubuntulinux/))
+```sh
+curl -L https://github.com/yongjhih/openage-docker/raw/master/docker-compose.yml | docker-compose -f - run openage
+```
 
-### Usage
+or
 
-1. Build a fresh new container with openage and all its dependencies :
-
-    `docker-compose build` 
-
-2. Run openage inside the container :
-
-    `docker-compose run openage`
+```sh
+docker run -it -e DISPLAY=$DISPLAY --device /dev/snd:/dev/snd:rwm && \
+      -v /tmp/.X11-unix:/tmp/.X11-unix
+      -v /home/inakoll/PlayOnLinux's virtual drives/Steam/drive_c/Program Files/Steam/steamapps/common/Age2HD/:/app/age2dir
+      -v /app/openage/assets
+      yongjhih/openage
+```

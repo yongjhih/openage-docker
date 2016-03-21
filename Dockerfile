@@ -49,3 +49,4 @@ USER developer
 ENV HOME /home/developer
 ENV AGE2DIR /app/age2dir
 ENV LANG C.UTF-8
+CMD ./run

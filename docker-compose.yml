@@ -1,6 +1,6 @@
 openage:
-  build: .
-  command: ./run
+  #build: .
+  image: yongjhih/openage
   #command: bash
   #command: bash -c "make build tests && make checkall"
   environment:
